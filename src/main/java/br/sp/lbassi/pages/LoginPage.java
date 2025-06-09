@@ -1,6 +1,7 @@
 package br.sp.lbassi.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import br.sp.lbassi.core.BasePage;
 import br.sp.lbassi.core.DriverFactory;
@@ -9,6 +10,7 @@ public final class LoginPage extends BasePage {
 	
 	public void acessarTelaInicial() {
 		DriverFactory.getDriver().get("https://seubarriga.wcaquino.me");
+		//WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("exampleElementId")));
 		
 	}
 	
