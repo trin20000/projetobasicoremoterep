@@ -9,8 +9,7 @@ import br.sp.lbassi.core.DriverFactory;
 public final class LoginPage extends BasePage {
 	
 	public void acessarTelaInicial() {
-		DriverFactory.getDriver().get("https://seubarriga.wcaquino.me");
-		//WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("exampleElementId")));
+		DriverFactory.getDriver().get("https://seubarriga.wcaquino.me");		
 		
 	}
 	

@@ -14,8 +14,8 @@ public class DriverFactory {
 	public static WebDriver getDriver()	{
 		if (driver == null) {
 			switch (Propriedades.browser) {
-				case FIREFOX: new FirefoxDriver(); break;
-				case CHROME: new ChromeDriver(); break;			
+				case FIREFOX: driver = new FirefoxDriver(); break;
+				case CHROME: driver = new ChromeDriver(); break;			
 			}		
 		driver.manage().window().setSize(new Dimension(1200, 765));
 		}
