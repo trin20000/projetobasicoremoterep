@@ -263,7 +263,8 @@ public void selecionarCombo(String id, String valor) {
 	
 	/******************** Tabela ******************************/
 	
-	public void clicarBotaoTabela(String colunaBusca, String valor, String colunaBotao, String idTabela) {
+	
+	public WebElement obterCelula(String colunaBusca, String valor, String colunaBotao, String idTabela) {
 		//procurar coluna do registro
 		WebElement tabela = DriverFactory.getDriver().findElement(By.xpath("//*[@id='elementosForm:tableUsuarios']"));
 		int idColuna = obterIndiceColuna(colunaBusca, tabela);
@@ -278,10 +279,17 @@ public void selecionarCombo(String id, String valor) {
 		
 		//clicar no botao da celula 
 		WebElement celula = tabela.findElement(By.xpath(".//tr["+idLinha+"]/td["+idColunaBotao+"]"));
-		celula.findElement(By.xpath(".//input")).click();
+		return celula;
 		
 		
-		//table[@id='elementosForm:tableUsuarios']//th
+		
+	}		
+	
+	public void clicarBotaoTabela(String colunaBusca, String valor, String colunaBotao, String idTabela) {			
+		
+		WebElement celula = obterCelula(colunaBusca, valor, colunaBotao, idTabela);
+		celula.findElement(By.xpath(".//input")).click();		
+		
 	}
 
 
