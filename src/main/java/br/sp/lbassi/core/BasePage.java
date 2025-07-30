@@ -57,6 +57,10 @@ public class BasePage {
 	}
 	
 	
+	public void clicarBotaoPorTexto(String texto) {
+		clicarBotao(By.xpath("//button[@class='"+texto+"']"));
+	}
+	
 
 	public void clicarBotao(By by) {
 	
@@ -266,7 +270,7 @@ public void selecionarCombo(String id, String valor) {
 	
 	public WebElement obterCelula(String colunaBusca, String valor, String colunaBotao, String idTabela) {
 		//procurar coluna do registro
-		WebElement tabela = DriverFactory.getDriver().findElement(By.xpath("//*[@id='elementosForm:tableUsuarios']"));
+		WebElement tabela = DriverFactory.getDriver().findElement(By.xpath("//*[@id='tabelaContas']"));
 		int idColuna = obterIndiceColuna(colunaBusca, tabela);
 		
 		//encontrar linha do registro

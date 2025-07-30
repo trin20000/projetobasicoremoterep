@@ -22,7 +22,8 @@ public final class LoginPage extends BasePage {
 	}
 	
 	public void entrar() {
-		clicarBotao(By.xpath("//button[.='Entrar']"));
+		clicarBotaoPorTexto("btn btn-primary");
+		
 		
 	}
 	
