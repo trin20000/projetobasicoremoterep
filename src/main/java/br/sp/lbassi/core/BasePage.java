@@ -270,7 +270,7 @@ public void selecionarCombo(String id, String valor) {
 	
 	public WebElement obterCelula(String colunaBusca, String valor, String colunaBotao, String idTabela) {
 		//procurar coluna do registro
-		WebElement tabela = DriverFactory.getDriver().findElement(By.xpath("//*[@id='tabelaContas']"));
+		WebElement tabela = DriverFactory.getDriver().findElement(By.xpath("//*[@id='"+idTabela+"']"));
 		int idColuna = obterIndiceColuna(colunaBusca, tabela);
 		
 		//encontrar linha do registro

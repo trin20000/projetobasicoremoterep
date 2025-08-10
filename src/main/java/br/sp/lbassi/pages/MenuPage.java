@@ -20,11 +20,15 @@ public class MenuPage extends BasePage {
 		clicarLink("Criar Movimentação");
 		
 		
-	}
-	
+	}	
 	
 	public void acessarTelaResumo() {
 		clicarLink("Resumo Mensal");		
+		
+	}
+	
+	public void acessarTelaPrincipal() {
+		clicarLink("Home");		
 		
 	}
 }

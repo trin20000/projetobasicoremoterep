@@ -10,22 +10,10 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import br.sp.lbassi.pages.LoginPage;
 
-public class BaseTest {
-	private LoginPage page = new LoginPage();	
+public class BaseTest {	
 	
 	@Rule
-	public TestName testName = new TestName();
-	
-	@Before	
-	public void inicializa() {
-		page.acessarTelaInicial();
-		
-		page.setEmail("leonardo@trindade");
-		page.setSenha("123456");
-		page.entrar();
-		
-		
-	}
+	public TestName testName = new TestName();	
 	
 	@After	
 	public void finaliza() throws IOException {
